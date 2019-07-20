@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  
+  //TODO: === Container Component (To Capture Data)
   primaryColor = 'red';
   projects$;
   selectedProject: Project;
-
-
 
   constructor(private projectsService: ProjectsService) {
   }
@@ -22,6 +22,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   selectProject(project) {
+    // console.log('SELECT PROJECT', project);
     this.selectedProject = project;
   }
 
@@ -65,8 +66,9 @@ export class ProjectsComponent implements OnInit {
   }
 
   deleteProject(project) {
-    this.projectsService.delete(project.id)
-      .subscribe(result => this.getProjects());
+    console.log('DELETE PROJECT', project);
+    // this.projectsService.delete(project.id)
+      // .subscribe(result => this.getProjects());
   }
 
   cancel() {
