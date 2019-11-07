@@ -28,6 +28,9 @@
       ],
       "@workshop/ui-toolbar": [
         "libs/ui-toolbar/src/index.ts"
+      ],
+      "@workshop/testlib": [
+        "libs/testlib/src/index.ts"
       ]
     }
   },

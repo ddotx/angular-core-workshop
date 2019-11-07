@@ -11,13 +11,13 @@
     </span>
   </span>
   <span class="spacer"></span>
-  <button class="login" mat-mini-fab>
+  <button class="login" mat-mini-fab (click)="switch()">
     <mat-icon>person</mat-icon>
   </button>
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+  <mat-sidenav *ngIf="!show" #sidenav mode="side" opened class="app-sidenav">
     <nav>
       <a mat-button class="nav-link"
         *ngFor="let link of links"
@@ -33,4 +33,5 @@
   <div class="app-content">
     <router-outlet></router-outlet>
   </div>
+
 </mat-sidenav-container>
